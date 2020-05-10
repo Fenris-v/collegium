@@ -18,6 +18,8 @@ h1
   margin: 0 auto
   max-width: 1200px
   width: 100%
+  padding: 0 30px
+  @include box-sizing()
 
 .wrapper_fullHD
   max-width: 1920px
@@ -29,6 +31,7 @@ h1
   justify-content: space-between
   align-items: center
   padding: 10px 30px 0
+  position: relative
 
   &__nav
     ul
@@ -128,6 +131,7 @@ h1
 
     img
       margin-right: 35px
+      @include object-fit(contain)
 
     &__name
       display: flex
@@ -153,6 +157,7 @@ h1
   @include font($white, $bold, bold, 14px, 40px)
   text-decoration: none
   cursor: pointer
+  white-space: nowrap
 
 .btn_red
   background: $red
@@ -225,7 +230,7 @@ h1
           @include box-sizing()
           top: 0
           left: 50%
-          transform: translate(-50%, -50%)
+          @include transform(translate(-50%, -50%))
           -webkit-clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
           clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
           @include font($white, $bold, bold, 12px, 30px)
@@ -251,7 +256,7 @@ h1
           @include box-sizing()
           bottom: 0
           left: 50%
-          transform: translate(-50%, 50%)
+          @include transform(translate(-50%, 50%))
           -webkit-clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
           clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
           @include font($white, $bold, bold, 12px, 30px)
@@ -287,7 +292,7 @@ h1
           @include box-sizing()
           top: 0
           left: 40px
-          transform: translateY(-50%)
+          @include transform(translateY(-50%))
           -webkit-clip-path: polygon(100% 0, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
           clip-path: polygon(100% 0, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
           @include font($white, $bold, bold, 12px, 30px)
@@ -303,7 +308,7 @@ h1
           @include box-sizing()
           bottom: 0
           left: 40px
-          transform: translateY(50%)
+          @include transform(translateY(50%))
           -webkit-clip-path: polygon(100% 0, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
           clip-path: polygon(100% 0, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
           @include font($white, $bold, bold, 12px, 30px)
@@ -321,7 +326,7 @@ h1
       position: absolute
       top: 50%
       left: 50%
-      transform: translate(-50%, -50%)
+      @include transform(translate(-50%, -50%))
       background: rgba(196, 196, 196, 30%)
       width: 50%
       height: 50%
@@ -331,7 +336,7 @@ h1
       position: absolute
       top: 50%
       left: 50%
-      transform: translate(-50%, -50%)
+      @include transform(translate(-50%, -50%))
 
 
 .projects
@@ -368,7 +373,7 @@ h1
             @include font($textBlack, $bold, bold, 18px, 30px)
 
         .btn
-          margin-bottom: 20px
+          margin-bottom: 25px
 
 .slick-arrow
   position: absolute
@@ -387,7 +392,7 @@ h1
     outline: none
 
   &:hover
-    transform: scale(1.2)
+    @include transform(scale(1.2))
     @include transition()
 
 .slick-prev

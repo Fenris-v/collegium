@@ -2,7 +2,7 @@ $(document).ready(() => {
     /**
      * HAMBURGER
      */
-    $('.menu-toggle-inner').on('click', function (e) {
+    $('.menu-toggle-inner').on('click', function () {
         $('.adaptive-menu-toggle').toggleClass('adaptive-menu-toggle--open');
         $('.headerNav_adaptive').toggleClass('header_opened');
     });
@@ -31,6 +31,13 @@ $(document).ready(() => {
         infinite: false,
         dots: false,
         autoplay: false,
-        draggable: false
+        draggable: false,
+        responsive: [{
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }]
     });
 });

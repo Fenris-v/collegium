@@ -1,8 +1,208 @@
 @import "variables"
 @import "prefixes"
 
+@media only screen and (max-width: 1600px)
+  .header__lang ul
+    margin-right: 10px
+
+  .header__contacts img
+    margin-right: 0
+
+@media only screen and (max-width: 1500px)
+  .header__nav
+    display: none
+
 @media only screen and (max-width: 1200px)
+  .collegium__people__man__photo img
+    padding: 5px
+
+  .firstScreen__slider img
+    -o-object-position: right
+    object-position: right
+
+@media only screen and (max-width: 1000px)
+  .functions__task
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  .functions__task_small, .functions__task_big
+    float: none !important
+    width: 48%
+    margin: 0 0 60px !important
+    padding: 60px 30px 30px !important
+
+  .first
+    order: 1
+
+  .second
+    order: 2
+    flex-direction: column
+    align-items: center
+    text-align: center
+
+    .functions__task__img
+      margin: 0
+
+  .third
+    order: 3
+    align-items: center
+    flex-direction: column
+    text-align: center
+
+    .functions__task__img
+      margin: 0 0 30px
+
+  .fourth
+    order: 4
+
+  .clearfix, .functions__task__bg
+    display: none
+
+  .functions__task__btn
+    order: 5
+    position: static
+    @include transform(translate(0))
+    margin: 0 auto
+
+  .collegium__people
+    flex-wrap: wrap
+
+    &__man
+      width: 48%
+      max-width: 400px
+
+      &:first-child
+        margin-bottom: 50px
+
+  .footer
+    &_top
+      flex-wrap: wrap
+
+    &_half
+      width: 100%
+
+      &:first-child
+        margin-bottom: 40px
+
+      &:last-child
+        justify-content: space-between
 
 @media only screen and (max-width: 767px)
+  .wrapper
+    padding: 0 15px
+
+  .firstScreen__content__name, .firstScreen__content__desc
+    margin-bottom: 40px
+
+  .firstScreen__content h1
+    font-size: 35px
+
+  .firstScreen, .firstScreen__slider img
+    height: 730px
+
+  .s_firstScreen, .s_functions, .s_projects, .s_collegium, .s_pattern
+    margin-bottom: 40px
+
+  .innerTitle
+    font-size: 30px
+    margin-bottom: 40px
+
+  .functions__task_small, .functions__task_big
+    margin-bottom: 30px !important
+
+  .functions__task_big.third, .functions__task_small.fourth
+    margin-bottom: 60px !important
+
+  .slick-arrow
+    top: -80px
 
 @media only screen and (max-width: 640px)
+  .header__lang, .header__contacts
+    display: none
+
+  .firstScreen__content__name
+    flex-direction: column
+    align-items: center
+    margin-bottom: 0
+    font-size: 20px
+
+  .firstScreen, .firstScreen__slider img
+    height: 870px
+
+  .firstScreen__content
+    left: 15px
+    right: 15px
+
+  .firstScreen__content h1
+    font-size: 30px
+    line-height: 1.3
+    margin-bottom: 30px
+
+  .firstScreen__content__desc
+    font-size: 20px
+    line-height: 1.2
+
+  .btn_slider
+    padding: 0 20px
+
+  .btn_slider img
+    margin-left: 10px
+
+  .innerTitle
+    font-size: 25px
+    line-height: 1.2
+
+  .functions__task_small, .functions__task_big
+    width: 100%
+    margin-bottom: 30px !important
+
+  .functions__task_big.third
+    margin-bottom: 30px !important
+
+  .functions__task_small.fourth
+    margin-bottom: 60px !important
+
+  .s_projects
+    margin-bottom: 70px
+
+  .projects__slider .project
+    flex-direction: column
+
+  .projects__slider .project img
+    margin: 0
+
+  .slick-arrow
+    top: auto
+    bottom: -30px
+
+  .slick-prev
+    left: 0
+
+  .projects__slider .project__content .btn
+    margin-left: 10px
+
+  .collegium__people
+    justify-content: center
+
+  .collegium__people__man
+    width: 100%
+
+  .footer_half_top
+    flex-direction: column
+    align-items: center
+
+  .footer_half_top
+    img
+      margin: 0
+
+    p
+      text-align: center
+
+  .footer__nav
+    width: 50%
+
+    &:first-child
+      margin-right: 20px
+
+
