@@ -1,0 +1,545 @@
+@import "variables"
+@import "prefixes"
+/* RESET */
+@import "normalize"
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+
+h1
+  margin: 0
+
+.wrapper
+  margin: 0 auto
+  max-width: 1200px
+  width: 100%
+
+.wrapper_fullHD
+  max-width: 1920px
+  width: 100%
+  margin: 0 auto
+
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 10px 30px 0
+
+  &__nav
+    ul
+      display: flex
+
+      li
+        margin: 0 10px
+
+        a
+          text-transform: uppercase
+          @include font($size: 17px, $line: 55px, $weight: 600)
+          text-decoration: none
+          border-bottom: 4px solid transparent
+          padding: 0 10px
+          @include box-sizing()
+          display: block
+          @include transition()
+          white-space: nowrap
+
+          &:hover
+            @include transition()
+            border-bottom: 4px solid $textGreen
+            color: $textGreen
+
+      .header__nav__item_active a
+        @include transition()
+        border-bottom: 4px solid $textGreen
+        color: $textGreen
+
+  &__lang
+    ul
+      display: flex
+
+      li
+        margin: 0 5px
+
+      a
+        width: 45px
+        background: $bgGrey
+        display: flex
+        @include border-radius(50%)
+        align-items: center
+        justify-content: center
+        text-transform: uppercase
+        @include font($size: 13px, $weight: 600, $line: 45px)
+        @include transition()
+
+        &:hover
+          color: $white
+          background: $textGreen
+          @include transition()
+
+      .header__lang_active a
+        color: $white
+        background: $textGreen
+        @include transition()
+
+  &__contacts
+    display: flex
+
+    img
+      margin-right: 20px
+
+    a
+      text-transform: uppercase
+      @include font($size: 17px, $line: 55px, $weight: 600)
+      text-decoration: none
+      padding: 0 10px
+      @include box-sizing()
+      display: block
+      @include transition()
+      white-space: nowrap
+
+      &:hover
+        @include transition()
+        color: $textGreen
+
+.s_firstScreen, .s_functions, .s_projects, .s_collegium, .s_pattern
+  margin-bottom: $mBottom
+
+.firstScreen
+  height: 850px
+  position: relative
+
+  &__slider
+    display: flex
+
+    img
+      @include object-fit()
+      width: 100%
+      height: 850px
+
+  &__content
+    position: absolute
+    top: 0
+    padding-top: 25px
+
+    img
+      margin-right: 35px
+
+    &__name
+      display: flex
+      margin-bottom: 85px
+
+      p
+        @include font($white, $regular, 600, 26px, 36px)
+        max-width: 550px
+
+    h1
+      @include font($white, $regular, 600, 48px, 58px)
+      max-width: 700px
+      margin-bottom: 50px
+
+    &__desc
+      max-width: 600px
+      @include font($white, $regular, 300, 22px, 36px)
+      margin-bottom: 80px
+
+.btn
+  display: inline-block
+  text-transform: uppercase
+  @include font($white, $bold, bold, 14px, 40px)
+  text-decoration: none
+  cursor: pointer
+
+.btn_red
+  background: $red
+  @include border-radius(20px)
+  @include transition()
+  padding: 0 40px
+  @include box-shadow(0 15px 15px $bgGrey)
+
+  &:hover
+    opacity: 0.8
+    @include transition()
+
+.btn_slider
+  @include font($white, $bold, bold, 17px, 65px)
+  padding: 0 70px
+  @include box-sizing()
+  @include border-radius(35px)
+  @include box-shadow(none)
+
+  img
+    margin: 0 0 0 30px
+    vertical-align: middle
+
+.innerTitle
+  @include font($weight: 600, $size: 42px, $line: 55px)
+  margin: 0 0 $mBottom 0
+  text-align: center
+
+  span
+    color: #0EDFD3
+
+.clearfix
+  clear: both
+
+.functions
+  &__task
+    position: relative
+
+    &__img
+      background: $white
+      width: 110px
+      height: 110px
+      @include border-radius(50%)
+      display: flex
+      justify-content: center
+      align-items: center
+
+    &_small
+      width: 35%
+      padding: 60px
+      @include box-sizing()
+
+      p
+        text-align: center
+
+      &.first
+        background: $red
+        float: left
+        padding-top: 85px
+        margin-bottom: 70px
+        position: relative
+
+        p
+          @include font($white, $bold, bold, 22px, 30px)
+
+        .functions__task__number
+          background: $textGreen
+          padding: 10px 30px
+          position: absolute
+          @include box-sizing()
+          top: 0
+          left: 50%
+          transform: translate(-50%, -50%)
+          -webkit-clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
+          clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
+          @include font($white, $bold, bold, 12px, 30px)
+          text-transform: uppercase
+
+      .functions__task__img
+        margin: 0 auto 30px
+
+        p
+          @include font($white, $bold, bold, 22px, 30px)
+
+      &.fourth
+        position: relative
+        float: right
+        background: url("../images/main/task.jpg") center center no-repeat
+        background-size: cover
+        clear: right
+
+        .functions__task__number
+          background: $textGreen
+          padding: 10px 30px
+          position: absolute
+          @include box-sizing()
+          bottom: 0
+          left: 50%
+          transform: translate(-50%, 50%)
+          -webkit-clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
+          clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
+          @include font($white, $bold, bold, 12px, 30px)
+          text-transform: uppercase
+
+        h3
+          text-align: center
+
+    &_big
+      background: url("../images/main/task.jpg") center center no-repeat
+      background-size: cover
+      width: 60%
+      display: flex
+      padding: 30px 60px 60px
+      align-items: flex-start
+      @include box-sizing()
+
+      .functions__task__img
+        margin-right: 45px
+        margin-top: 20px
+
+      &.second
+        float: right
+        margin-left: 5%
+        margin-bottom: 70px
+        margin-top: 30px
+        position: relative
+
+        .functions__task__number
+          background: $textGreen
+          padding: 10px 30px
+          position: absolute
+          @include box-sizing()
+          top: 0
+          left: 40px
+          transform: translateY(-50%)
+          -webkit-clip-path: polygon(100% 0, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
+          clip-path: polygon(100% 0, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
+          @include font($white, $bold, bold, 12px, 30px)
+
+      &.third
+        clear: left
+        position: relative
+
+        .functions__task__number
+          background: $textGreen
+          padding: 10px 30px
+          position: absolute
+          @include box-sizing()
+          bottom: 0
+          left: 40px
+          transform: translateY(50%)
+          -webkit-clip-path: polygon(100% 0, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
+          clip-path: polygon(100% 0, 100% 100%, 0% 100%, 10% 50%, 0% 0%)
+          @include font($white, $bold, bold, 12px, 30px)
+
+    &__content
+      h3
+        @include font($textBlack, $bold, bold, 26px, 34px)
+        margin: 0 0 10px
+
+      p
+        @include font($textBlack, $regular, normal, 16px, 24px)
+        max-width: 400px
+
+    &__bg
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background: rgba(196, 196, 196, 30%)
+      width: 50%
+      height: 50%
+      z-index: -1
+
+    &__btn
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+
+.projects
+  .innerTitle
+    text-align: left
+
+    span
+      color: $red
+
+  &__slider
+    display: flex
+    justify-content: space-between
+
+    .project
+      width: 48%
+      display: flex
+
+      &:focus
+        outline: none
+
+      img
+        width: 200px
+        @include object-fit()
+        margin-right: 45px
+        height: 280px
+
+      &__content
+        padding-right: 30px
+
+        p
+          @include font($textBlack, $regular, normal, 18px, 30px)
+
+          span
+            @include font($textBlack, $bold, bold, 18px, 30px)
+
+        .btn
+          margin-bottom: 20px
+
+.slick-arrow
+  position: absolute
+  top: -110px
+  border: none
+  background: transparent
+  color: transparent
+  font-size: 0
+  width: 40px
+  height: 30px
+  cursor: pointer
+  z-index: 1
+  @include transition()
+
+  &:focus
+    outline: none
+
+  &:hover
+    transform: scale(1.2)
+    @include transition()
+
+.slick-prev
+  right: 70px
+  background: url("../images/icon/arrow-left.svg") center no-repeat
+  background-size: 100%
+
+.slick-next
+  right: 0
+  background: url("../images/icon/arrow-right.svg") center no-repeat
+  background-size: 100%
+
+.collegium
+  &__people
+    display: flex
+    justify-content: space-between
+
+    &__man
+      width: 23%
+
+      &__photo
+        width: 100%
+        height: 350px
+        background: url("../images/main/frame.png") no-repeat
+        background-size: 100% 100%
+        margin-bottom: 20px
+
+        img
+          width: 100%
+          height: 100%
+          padding: 8px
+          @include box-sizing()
+          @include object-fit()
+
+      &__social
+        ul
+          display: flex
+
+        li
+          margin-right: 10px
+
+        a
+          display: flex
+          justify-content: center
+          align-items: center
+          background: $lightGrey
+          width: 45px
+          height: 45px
+          @include border-radius(50%)
+          @include transition()
+
+          img:last-child
+            display: none
+
+          &:hover
+            background: $red
+            @include transition()
+
+            img
+              &:first-child
+                display: none
+
+              &:last-child
+                display: block
+
+
+      p
+        @include font($textBlack, $regular, normal, 15px, 36px)
+
+      &__name
+        @include font($textBlack, $regular, 600, 22px, 30px)
+
+.pattern
+  width: 100%
+  height: 80px
+
+  img
+    width: 100%
+    height: 100%
+    @include object-fit()
+
+
+.footer
+
+  &_top
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+  &_half
+    width: 48%
+
+    &:last-child
+      display: flex
+
+    &_top
+      display: flex
+      align-items: flex-start
+      margin-bottom: 30px
+
+      img
+        margin-right: 30px
+
+      p
+        @include font($textBlack, $regular, 600, 26px, 36px)
+        margin: 0
+
+    &__contacts
+      li
+        display: flex
+        margin-bottom: 10px
+        @include font($textBlack, $regular, normal, 17px)
+
+      a
+        display: flex
+        @include font($textBlack, $regular, normal, 17px)
+        text-decoration: none
+
+      img
+        margin-right: 15px
+
+  &__nav
+    &:first-child
+      margin-right: 100px
+
+    &__item
+      margin-bottom: 30px
+
+      a
+        @include font($textBlack, $regular, 600, 17px)
+        text-transform: uppercase
+        @include transition()
+
+        &:hover
+          color: $textGreen
+          @include transition()
+
+      &_active a
+        color: $textGreen
+
+  hr
+    height: 1px
+    background: $bgGrey
+    border: none
+    margin: 60px 0 20px
+
+  &__copyright
+    p
+      @include font($textBlack, $regular, normal, 14px)
+      margin: 30px 0
+
+/* RESPONSIVE */
+@import "responsive"
+/* HAMBURGER */
+@import "hamburger"
