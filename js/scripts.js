@@ -40,4 +40,14 @@ $(document).ready(() => {
             }
         }]
     });
+
+    $('.profile__anchor a').on('click', (e) => {
+        e.preventDefault();
+        let id = $(e.target).attr('href');
+        let top = $(id).offset().top - 50;
+        $('body, html').animate({scrollTop: top}, 1500);
+
+        $('.profile__anchor').removeClass('profile__anchor_active');
+        $(e.target).parents('li').addClass('profile__anchor_active');
+    });
 });

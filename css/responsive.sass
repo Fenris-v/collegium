@@ -88,6 +88,24 @@
       &:last-child
         justify-content: space-between
 
+  .contacts__container
+    flex-direction: column
+    align-items: center
+
+    .contacts__item
+      width: 100%
+      max-width: 350px
+      margin-bottom: 20px
+
+  .science__project_top_left
+    .science__project_absolute
+      position: static
+      @include transform(translate(0))
+      padding-top: 10px
+
+  .collegium__filter
+    display: none
+
 @media only screen and (max-width: 767px)
   .wrapper
     padding: 0 15px
@@ -117,6 +135,68 @@
   .slick-arrow
     top: -80px
 
+  .s_firstScreen_small
+    margin: 0
+
+  .firstScreen_small
+    height: 180px
+
+    .firstScreen__slider img
+      height: 180px
+
+  .breadcrumbs__container
+    flex-direction: column
+    align-items: flex-start
+    padding-top: 30px
+    margin-bottom: 20px
+
+    .innerTitle, .breadcrumbs
+      width: 100%
+      margin-bottom: 20px
+
+    .breadcrumbs ul
+      justify-content: flex-start
+
+  .functions__container
+    padding-top: 20px
+
+  .functions__item
+    width: 100%
+
+  .profile__container
+    flex-wrap: wrap
+    flex-direction: column
+    align-items: center
+
+  .profile_left
+    margin-right: 0
+
+  .science__project_top
+    flex-wrap: wrap
+
+    &_left, &_right
+      width: 100%
+
+  .science__project_absolute
+    margin-bottom: 30px
+
+  .science__project__news
+    flex-wrap: wrap
+
+    &__item
+      width: 48%
+      margin-bottom: 20px
+
+  .science__project__publication
+    flex-wrap: wrap
+
+  .science__project_top_right h1
+    font-size: 25px
+    line-height: 1.3
+
+  .s_collegium_inner
+    margin-bottom: 0
+
 @media only screen and (max-width: 640px)
   .header__lang, .header__contacts
     display: none
@@ -126,6 +206,14 @@
     align-items: center
     margin-bottom: 0
     font-size: 20px
+    text-align: center
+
+  .firstScreen__content img
+    margin-right: 0
+
+  .firstScreen__content__name p
+    font-size: 20px
+    line-height: 1.2
 
   .firstScreen, .firstScreen__slider img
     height: 870px
@@ -205,4 +293,63 @@
     &:first-child
       margin-right: 20px
 
+  .breadcrumbs__container
+    margin-bottom: 0
 
+  .s_firstScreen_small
+    margin: 0
+
+  .firstScreen_small
+    height: 250px
+
+    .firstScreen__slider img
+      height: 250px
+
+  .article img
+    margin-bottom: 20px
+
+  .article .btn_red
+    white-space: normal
+    text-align: center
+    line-height: 1.3
+    padding: 10px 20px
+
+  .article__inner
+    font-size: 18px
+    line-height: 1.2
+    margin-bottom: 20px
+
+  .article__list
+    padding-top: 30px
+
+    li span
+      font-size: 18px
+
+  .functions__item
+    flex-direction: column
+    align-items: center
+    padding: 40px 10px 10px
+
+    .functions__task__img
+      width: 100%
+
+    .functions__task__content
+      width: 100%
+      padding: 10px 0 0
+
+  .s_functions
+    margin: 0
+    padding-bottom: 40px
+
+  .profile__discovery__item
+    width: 100%
+
+  .science__project__news__item
+    width: 100%
+
+  .pagination__nums__item a, .pagination__nums li
+    width: 30px
+    line-height: 30px
+
+  .pagination .pagination__back, .pagination .pagination__next
+    margin: 0
