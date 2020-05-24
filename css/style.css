@@ -1232,14 +1232,14 @@ h1 {
   object-position: center;
 }
 
-.s_collegium_inner, .s_profile, .s_contacts, .s_functions, .s_science, .s_article {
+.s_collegium_inner, .s_profile, .s_contacts, .s_functions_bg, .s_science, .s_article {
   background: #F5F5F5;
   margin: 0;
 }
-.s_collegium_inner .collegium__people__man__social a, .s_profile .collegium__people__man__social a, .s_contacts .collegium__people__man__social a, .s_functions .collegium__people__man__social a, .s_science .collegium__people__man__social a, .s_article .collegium__people__man__social a {
+.s_collegium_inner .collegium__people__man__social a, .s_profile .collegium__people__man__social a, .s_contacts .collegium__people__man__social a, .s_functions_bg .collegium__people__man__social a, .s_science .collegium__people__man__social a, .s_article .collegium__people__man__social a {
   background: #FFFFFF;
 }
-.s_collegium_inner .collegium__people__man__social a:hover, .s_profile .collegium__people__man__social a:hover, .s_contacts .collegium__people__man__social a:hover, .s_functions .collegium__people__man__social a:hover, .s_science .collegium__people__man__social a:hover, .s_article .collegium__people__man__social a:hover {
+.s_collegium_inner .collegium__people__man__social a:hover, .s_profile .collegium__people__man__social a:hover, .s_contacts .collegium__people__man__social a:hover, .s_functions_bg .collegium__people__man__social a:hover, .s_science .collegium__people__man__social a:hover, .s_article .collegium__people__man__social a:hover {
   background: #F33037;
 }
 
