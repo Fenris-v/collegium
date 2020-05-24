@@ -103,8 +103,27 @@
       @include transform(translate(0))
       padding-top: 10px
 
+  //.collegium__filter
+  //  display: none
+
   .collegium__filter
-    display: none
+    ul
+      flex-wrap: wrap
+    .collegium__filter__item
+      &:first-child
+        width: 100%
+        text-align: center
+
+        a
+          margin-right: 0
+
+@media only screen and (max-width: 900px)
+  .collegium__filter
+    ul
+      justify-content: center
+
+    .collegium__filter__item
+      margin: 0 1%
 
 @media only screen and (max-width: 767px)
   .wrapper
@@ -196,6 +215,11 @@
 
   .s_collegium_inner
     margin-bottom: 0
+
+  .collegium__filter
+
+    .collegium__filter__item
+      margin: 0 0.5%
 
 @media only screen and (max-width: 640px)
   .header__lang, .header__contacts
@@ -353,3 +377,8 @@
 
   .pagination .pagination__back, .pagination .pagination__next
     margin: 0
+
+  .collegium__filter
+
+    .collegium__filter__item
+      margin: 0
